@@ -9,17 +9,14 @@ module.exports = function (UserIdentity) {
     profile,
     credentials
   ) => {
-    const foundUserIdentity = await UserIdentity.findOne({
+    const foundUser = await User.findOne({
       where: {
         provider,
         email: profile.email,
       },
     });
 
-    if (foundUserIdentity) {
-      const user = await User.findById(foundUserIdentity.userId);
-      return user.createAccessToken();
-    }
+    if (foundUser) return foundUser;
 
     const password = randomstring.generate({
       charset: "abcdefghijklmnopqrstuvwxyz0123456789",
