@@ -1,0 +1,15 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "postgressdb": {
+    "host": "database-1.caw8npzmslzc.ap-south-1.rds.amazonaws.com",
+    "port": 5432,
+    "database": "covidnotifier",
+    "password": "Covid19Database4rTest$",
+    "name": "postgressdb",
+    "user": "root",
+    "connector": "postgresql"
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<%- include('header')-%>
+
+<div class="container">
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Vaccine</th>
+        <th>FeeType</th>
+        <th>FeeAmount</th>
+        <th>MinAgeLimit</th>
+        <th>AvailableCapacity</th>
+        <th>Slots</th>
+      </tr>
+    </thead>
+    <tbody>
+        <%items.forEach(function(entry) {%>
+        <tr>
+        <td><%=entry.name%></td>
+        <td><%=entry.address%></td>
+        <td><%=entry.vaccine%></td>
+        <td><%=entry.feeType%></td>
+        <td><%=entry.feeAmount%></td>
+        <td><%=entry.minAgeLimit%></td>
+        <td><%=entry.availableCapacity%></td>
+        <td><%=entry.slots%></td>
+        </tr>
+        <%});%>
+        </tbody>
+  </table>
+  </div>
+</div>
+
+</body>
+</html>
+<%- include('footer')-%>

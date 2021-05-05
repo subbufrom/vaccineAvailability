@@ -1,0 +1,41 @@
+{
+  "baseURL": "http://localhost:3000",
+  "local": {
+    "provider": "local",
+    "module": "passport-local",
+    "usernameField": "username",
+    "passwordField": "password",
+    "authPath": "/auth/local",
+    "successRedirect": "/auth/account",
+    "failureRedirect": "/local",
+    "failureFlash": true
+  },
+  "google-login": {
+    "provider": "google",
+    "module": "passport-google-oauth",
+    "strategy": "OAuth2Strategy",
+    "clientID": "10326219038-dsq0v1jsledik211i0qfinr3grnj0kjk.apps.googleusercontent.com",
+    "clientSecret": "f50p7xGWgOG-MQlRjqqToSb2",
+    "callbackURL": "/auth/google/callback",
+    "authPath": "/auth/google",
+    "callbackPath": "/auth/google/callback",
+    "failureFlash": true,
+    "session": true
+  },
+  "google-link": {
+    "provider": "google",
+    "module": "passport-google-oauth",
+    "strategy": "OAuth2Strategy",
+    "clientID": "10326219038-dsq0v1jsledik211i0qfinr3grnj0kjk.apps.googleusercontent.com",
+    "clientSecret": "f50p7xGWgOG-MQlRjqqToSb2",
+    "callbackURL": "/link/google/callback",
+    "authPath": "/link/google",
+    "callbackPath": "/link/google/callback",
+    "successRedirect": "/auth/account",
+    "failureRedirect": "/login",
+    "scope": ["email", "profile"],
+    "link": true,
+    "failureFlash": true,
+    "session": true
+  }
+}

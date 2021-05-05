@@ -1,0 +1,36 @@
+{
+  "name": "SlotNotification",
+  "plural": "SlotNotifications",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "createdAt": {
+      "type": "date"
+    },
+    "updatedAt": {
+      "type": "date"
+    },
+    "pincode": {
+      "type": "number"
+    },
+    "agePreferrence": {
+      "type": "number"
+    },
+    "notifiedCount": {
+      "type": "number"
+    }
+  },
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "RMUser",
+      "foreignKey": "userId"
+    }
+  },
+  "validations": [],
+  "acls": [],
+  "methods": []
+}

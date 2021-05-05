@@ -1,0 +1,30 @@
+<%- include('header')-%>
+
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>Register</title>    
+</head>    
+<body>     
+    <div class="login" style="text-align: center;">  
+        <h4>Register here to get notified via Email when slots are available !!</h4>
+        <br>
+        <form id="login" action="/api/SlotNotifications/notify" method="POST"> 
+            <label><strong>Reminders will be sent to </strong> </label>    
+            <input type="email" name="email" id="email" value=<%= email%> readonly>
+            <br><br>
+            <label><strong>Enter the pincode </strong> </label>    
+            <input type="number" name="pincode" id="pincode" placeholder="enter picode here" required>    
+            <br><br>    
+            <input type="radio" id="eighteenYears" name="age" value="eighteenYears">
+            <label for="eighteenYears">Above 18 + and below 45 + years</label><br>
+            <input type="radio" id="fourtyFiveYears" name="age" value="fourtyFiveYears">
+            <label for="fourtyFiveYears">Above 45 + Only</label><br>
+            <input type="radio" id="both" name="age" value="both">
+            <label for="both">both</label><br>
+            <input type="submit">
+        </form>     
+    </div>    
+</body>    
+</html>
+<%- include('footer')-%>

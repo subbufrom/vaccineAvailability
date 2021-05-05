@@ -1,0 +1,50 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models",
+      "../node_modules/loopback-component-passport/lib/models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins",
+      "../node_modules/loopback-component-passport/lib/mixins"
+    ]
+  },
+  "user": {
+    "dataSource": "postgressdb",
+    "public": true
+  },
+  "accessToken": {
+    "dataSource": "postgressdb",
+    "public": false
+  },
+  "userCredential": {
+    "dataSource": "postgressdb",
+    "public": false
+  },
+  "userIdentity": {
+    "dataSource": "postgressdb",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "postgressdb",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "postgressdb",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "postgressdb",
+    "public": false
+  },
+  "SlotNotification": {
+    "dataSource": "postgressdb",
+    "public": true
+  }
+}

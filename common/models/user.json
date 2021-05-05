@@ -1,0 +1,35 @@
+{
+  "name": "user",
+  "plural": "users",
+  "base": "User",
+  "properties": {
+    "createdAt": {
+      "type": "date"
+    }
+  },
+  "relations": {
+    "accessTokens": {
+      "type": "hasMany",
+      "model": "accessToken",
+      "foreignKey": "userId"
+    },
+    "identities": {
+      "type": "hasMany",
+      "model": "userIdentity",
+      "foreignKey": "userId"
+    },
+    "credentials": {
+      "type": "hasMany",
+      "model": "userCredential",
+      "foreignKey": "userId"
+    },
+    "notifications": {
+      "type": "hasMany",
+      "model": "SlotNotification",
+      "foreignKey": "userId"
+    }
+  },
+  "validations": [],
+  "acls": [],
+  "methods": []
+}
