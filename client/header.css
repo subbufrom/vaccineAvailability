@@ -1,0 +1,14 @@
+@media only screen and (max-width: 600px) {
+    .input-group {
+        display: inline-block !important;
+        text-align: center;
+        padding: inherit;
+    }
+    #form-class {
+        display: grid !important;
+        padding-right: inherit !important;
+    }
+    #home-text {
+        text-align: center;
+    }
+  }

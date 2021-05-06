@@ -32,7 +32,13 @@ module.exports = function (app) {
         },
         json: true,
       };
-      const response = await request(options);
+      let response = {};
+      try {
+        response = await request(options);
+      } catch (err) {
+        console.log(err);
+        response.sessions = [];
+      }
       const arrayOfSessions = response.sessions;
       const items = arrayOfSessions.map(
         ({
